@@ -1,0 +1,572 @@
+---
+import Layout from "../layouts/Layout.astro";
+---
+<Layout
+  title="Happy Feet Spa"
+  description="Home page for a reflexology and Traditional Chinese Medicine studio in Kansas City."
+  activeNav="home"
+>
+  <main id="top">
+    <!-- HERO -->
+    <section class="hero hero--video" aria-labelledby="hero-h">
+      <video id="heroVideo" class="hero-video" autoplay muted loop playsinline preload="auto">
+        <source src="/video/hero.mp4" type="video/mp4" />
+      </video>
+      <div class="hero-scrim" aria-hidden="true"></div>
+
+      <div class="wrap hero-stack">
+        <p class="eyebrow">Foot Reflexology &amp; Traditional Chinese Medicine</p>
+        <h1 class="brand-name" id="hero-h">
+          <canvas id="brandCanvas" class="brand-canvas" width="1600" height="280"></canvas>
+          <span class="brand-fallback">Happy Feet Spa</span>
+        </h1>
+        <div class="hero-actions">
+          <a class="btn btn-ember" href="tel:+18165233338">
+            Call to book
+            <span class="pip" aria-hidden="true"><svg viewBox="0 0 16 16" fill="none"><path d="M4 8h8M8 4l4 4-4 4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+          </a>
+          <a class="btn btn-ghost" href="/services">View Full Menu</a>
+        </div>
+        <p class="trust">Walk-ins welcome &middot; Certified therapists &middot; 4.7&#9733; (49 Google reviews)</p>
+      </div>
+    </section>
+
+    <!-- PILLARS -->
+    <section aria-labelledby="what-h">
+      <div class="wrap">
+        <div class="sec-head reveal">
+          <p class="eyebrow">Two traditions, one room</p>
+          <h2 id="what-h">Careful hands and warmth, applied where the body holds strain.</h2>
+        </div>
+        <div class="pillars">
+          <article class="pillar reveal">
+            <span class="zh">足療 &nbsp;Foot Reflexology</span>
+            <h3>Reading the sole, easing the whole</h3>
+            <p>Thumb and knuckle work across the reflex zones of the foot &mdash; the map that mirrors the rest of the body. Steady pressure to move blood, quiet the nervous system, and loosen what a long day on your feet leaves behind.</p>
+            <div class="art-wrap">
+              <img class="art-photo" src="/images/foot-reflexology-chart.png" alt="Foot reflexology chart showing reflex zones for head, chest, stomach, kidney, lower back, and pelvic area" />
+            </div>
+            <div class="chips">
+              <span class="chip">circulation</span><span class="chip">sleep</span><span class="chip">tired legs</span><span class="chip">tension headaches</span><span class="chip">stress</span>
+            </div>
+          </article>
+
+          <article class="pillar reveal">
+            <span class="zh">中醫理療 &nbsp;TCM Therapy</span>
+            <h3>Meridian-based bodywork</h3>
+            <p>Traditional Chinese medicine techniques from our senior therapist team &mdash; over 10 years of wellness experience, working the body's meridians to ease tension and restore balance.</p>
+            <div class="art-wrap">
+              <img class="art-photo" src="/images/moxibustion.png" alt="Illustration of moxibustion and cupping points along the back" />
+            </div>
+            <div class="chips">
+              <span class="chip">cold hands &amp; feet</span><span class="chip">digestion</span><span class="chip">stiff shoulders</span><span class="chip">recovery</span><span class="chip">fatigue</span>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- SERVICES TEASER -->
+    <section class="menu" id="menu" aria-labelledby="menu-h">
+      <div class="wrap">
+        <div class="sec-head reveal" style="text-align:center;max-width:60ch;margin-inline:auto;">
+          <p class="eyebrow">Treatments &amp; prices</p>
+          <h2 id="menu-h">Services</h2>
+          <p>Professional foot &amp; body massage for relaxation and pain relief.</p>
+        </div>
+
+        <div class="cat-grid">
+          <div class="cat reveal">
+            <img class="cat-photo" src="/images/category-foot-reflexology.png" alt="Foot reflexology session" />
+            <h3>Foot Reflexology</h3>
+            <p>Ideal for first-time visitors and quick stress relief.</p>
+          </div>
+          <div class="cat reveal">
+            <img class="cat-photo" src="/images/category-tcm-therapy.png" alt="TCM therapy session" />
+            <h3>TCM Therapy</h3>
+            <p>Cupping and moxibustion to move circulation and ease tension.</p>
+          </div>
+          <div class="cat reveal">
+            <img class="cat-photo" src="/images/category-body-head-massage.png" alt="Body and head massage session" />
+            <h3>Body &amp; Head Massage</h3>
+            <p>Full-body and scalp work for chronic tension and deep relaxation.</p>
+          </div>
+        </div>
+
+        <div class="cat-cta reveal">
+          <a class="btn btn-ember" href="/services">
+            View Full Menu
+            <span class="pip" aria-hidden="true"><svg viewBox="0 0 16 16" fill="none"><path d="M4 8h8M8 4l4 4-4 4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- REVIEWS -->
+    <section aria-labelledby="reviews-h">
+      <div class="wrap">
+        <div class="sec-head reveal" style="text-align:center;max-width:60ch;margin-inline:auto;">
+          <p class="eyebrow">4.7&#9733; &middot; 49 Google Reviews</p>
+          <h2 id="reviews-h">Our clients say</h2>
+        </div>
+
+        <div class="review-carousel reveal">
+          <button class="rev-arrow rev-prev" type="button" aria-label="Previous review">
+            <svg viewBox="0 0 20 20" fill="none"><path d="M12.5 4.5 6 10l6.5 5.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+
+          <div class="review-track" id="reviewTrack">
+            <article class="review-card" data-avatar="J1">
+              <div class="rev-avatar">J</div>
+              <div class="rev-bubble">
+                <p class="rev-quote">&ldquo;Excellent massage. I called at the last minute and was given an appointment in a half hour. Nice, quiet spa. No frills but excellent service and decent prices.&rdquo;</p>
+                <p class="rev-name">Janine Kowalke <span>&middot; Google Review</span></p>
+              </div>
+            </article>
+
+            <article class="review-card" data-avatar="T" hidden>
+              <div class="rev-avatar rev-avatar--b">T</div>
+              <div class="rev-bubble">
+                <p class="rev-quote">&ldquo;Jean is a true miracle worker! I have been a client for 10 years, doing massage therapy weekly. I sustained a terrible injury to my back that was so bad I was shaking all over and could not move. I went to Ortho Urgent Care and got no relief, just a brace. Jean suggested TCM and I went because I was willing to try anything at that point. It's called Moxibustion. I didn't expect what happened. It started out like a soothing heat, then the heat became very intense but ONLY in the spot that was injured. After 30 minutes, the heat went away and I started sweating a little. I thought the machine was off but Jean said it was still going. The heat went completely away and TOOK THE PAIN WITH IT!!! I promise you, I've never felt such an instantaneous surge of energy and relief. It was INSTANTLY better! The pain did not return either. If you are skeptical, just give it a try. You'll be floored!&rdquo;</p>
+                <p class="rev-name">Tamara Sanders KCUCE <span>&middot; Google Review</span></p>
+              </div>
+            </article>
+
+            <article class="review-card" data-avatar="J2" hidden>
+              <div class="rev-avatar rev-avatar--c">J</div>
+              <div class="rev-bubble">
+                <p class="rev-quote">&ldquo;Great Great Great. 75 minutes of gifted hand and feet massage and I am relaxed and ready to take on the world. Price is amazingly reasonable.&rdquo;</p>
+                <p class="rev-name">Jim Tompkins <span>&middot; Google Review</span></p>
+              </div>
+            </article>
+
+            <article class="review-card" data-avatar="A" hidden>
+              <div class="rev-avatar">A</div>
+              <div class="rev-bubble">
+                <p class="rev-quote">&ldquo;WOW! Love this place. So clean, so professional. I left feeling great and am ready to return. Try the hand and foot reflexology &mdash; terrific value with wonderful personal results.&rdquo;</p>
+                <p class="rev-name">Alana Muller <span>&middot; Google Review</span></p>
+              </div>
+            </article>
+          </div>
+
+          <button class="rev-arrow rev-next" type="button" aria-label="Next review">
+            <svg viewBox="0 0 20 20" fill="none"><path d="M7.5 4.5 14 10l-6.5 5.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+        </div>
+
+        <div class="rev-dots" id="reviewDots" role="tablist" aria-label="Choose a review">
+          <button type="button" class="rev-dot" data-index="0" aria-label="Review 1" aria-current="true"></button>
+          <button type="button" class="rev-dot" data-index="1" aria-label="Review 2"></button>
+          <button type="button" class="rev-dot" data-index="2" aria-label="Review 3"></button>
+          <button type="button" class="rev-dot" data-index="3" aria-label="Review 4"></button>
+        </div>
+      </div>
+    </section>
+
+    <!-- PEOPLE -->
+    <section aria-labelledby="people-h">
+      <div class="wrap">
+        <div class="sec-head reveal">
+          <p class="eyebrow">Who you'll see</p>
+          <h2 id="people-h">A senior team, fully certified.</h2>
+        </div>
+        <div class="people">
+          <div class="person reveal">
+            <h4>10+ Years</h4>
+            <p class="cred">Wellness experience</p>
+            <p>Our senior therapist team has spent over a decade refining foot reflexology and traditional Chinese bodywork.</p>
+          </div>
+          <div class="person reveal">
+            <h4>Fully Certified</h4>
+            <p class="cred">Licensed &amp; trained</p>
+            <p>Every therapist on staff is certified in the modalities they practice, from reflexology to TCM technique.</p>
+          </div>
+          <div class="person reveal">
+            <h4>Meridian-Focused</h4>
+            <p class="cred">Traditional method</p>
+            <p>Sessions draw on meridian-based therapy, working pressure points to ease tension and restore balance.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- VISIT -->
+    <section class="visit" id="visit" aria-labelledby="loc-h">
+      <div class="wrap">
+        <div class="sec-head reveal">
+          <p class="eyebrow">Find us</p>
+          <h2 id="loc-h">Come by, or <span class="brush">call</span> ahead.</h2>
+        </div>
+        <div class="visit-grid">
+          <div class="reveal">
+            <address>
+              7719 State Line Rd<br />
+              Meadowlake Shops, Kansas City, MO 64114<br />
+              <a href="tel:+18165233338">(816) 523-3338</a>
+            </address>
+            <table class="hours">
+              <tbody>
+                <tr><td>Monday &ndash; Saturday</td><td>10:00am &ndash; 7:00pm</td></tr>
+                <tr><td>Sunday</td><td>Closed</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="notes reveal">
+            <div class="note"><h4>Walk-ins</h4><p>Welcome based on availability &mdash; a quick call ahead is recommended for evenings and weekends.</p></div>
+            <div class="note"><h4>Location</h4><p>Find us in Meadowlake Shops on State Line Road, with parking right out front.</p></div>
+            <div class="note"><h4>Reviews</h4><p>Rated 4.7 stars from 49 Google reviews.</p></div>
+          </div>
+        </div>
+
+        <div class="map-wrap reveal">
+          <iframe
+            class="map-frame"
+            src="https://www.google.com/maps?q=7719+State+Line+Rd,+Kansas+City,+MO+64114&output=embed"
+            width="100%"
+            height="360"
+            style="border:0;"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            title="Map to Happy Feet Spa, 7719 State Line Rd, Kansas City, MO 64114"
+          ></iframe>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <style>
+    /* ---------- Hero video ---------- */
+    .hero--video {
+      position: relative;
+      isolation: isolate;
+      display: grid;
+      align-items: center;
+      min-height: clamp(560px, 88vh, 780px);
+      background: var(--hero-bg);
+      overflow: hidden;
+    }
+    .hero-video {
+      position: absolute; inset: 0;
+      width: 100%; height: 100%;
+      object-fit: cover;
+      z-index: 0;
+      animation: heroKen 26s ease-in-out infinite alternate;
+    }
+    @keyframes heroKen {
+      from { transform: scale(1.04) translate3d(-1%, -1%, 0); }
+      to   { transform: scale(1.1) translate3d(1%, 1.5%, 0); }
+    }
+    .hero-scrim {
+      position: absolute; inset: 0;
+      z-index: 1;
+      background: linear-gradient(180deg, rgba(244,241,234,.28) 0%, rgba(244,241,234,.6) 58%, rgba(244,241,234,.82) 100%);
+    }
+    .hero--video .wrap { position: relative; z-index: 2; }
+    .hero-stack {
+      display: flex; flex-direction: column;
+      align-items: center; text-align: center;
+      gap: 1.3rem;
+      max-width: 46ch; margin-inline: auto;
+    }
+    .brand-name { margin: .1rem 0 .05rem; line-height: 1; }
+    .brand-canvas {
+      display: block;
+      width: min(94vw, 860px);
+      height: auto;
+      aspect-ratio: 1600 / 280;
+      margin-inline: auto;
+    }
+    .brand-fallback { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
+    .hero-stack .hero-actions { display: flex; flex-wrap: wrap; gap: .9rem; justify-content: center; margin-top: 5.5rem; }
+    .hero .eyebrow { color: var(--ember); }
+    .hero .lead { color: var(--ink-soft); }
+    .hero .btn-ghost { color: var(--ink); }
+    .trust {
+      font-family: var(--f-mono);
+      font-size: .74rem;
+      letter-spacing: .04em;
+      color: var(--ink-soft);
+      display: flex; align-items: center; gap: .6rem; flex-wrap: wrap;
+    }
+    .trust::before { content: ""; width: 26px; height: 1px; background: var(--ember); display: inline-block; }
+
+    /* ---------- Pillars ---------- */
+    .pillars { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(1.5rem, 4vw, 3.5rem); }
+    .pillar { border-top: 2px solid var(--ink); padding-top: 1.8rem; }
+    .pillar .zh {
+      font-family: var(--f-mono);
+      font-size: .8rem;
+      letter-spacing: .14em;
+      color: var(--clay);
+      display: block;
+      margin-bottom: .5rem;
+    }
+    .pillar h3 { font-size: 1.55rem; margin-bottom: .8rem; }
+    .pillar p { color: var(--ink-soft); }
+    .pillar .art-wrap { margin: 1.8rem 0 1.4rem; }
+    .art-photo {
+      display: block;
+      width: 100%; max-width: 460px;
+      height: 300px;
+      object-fit: contain;
+      object-position: left top;
+      border-radius: 16px;
+    }
+    .chips { display: flex; flex-wrap: wrap; gap: .5rem; margin-top: 1.4rem; }
+    .chip {
+      font-family: var(--f-mono);
+      font-size: .72rem;
+      letter-spacing: .06em;
+      text-transform: lowercase;
+      padding: .32rem .7rem;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      color: var(--ink-soft);
+    }
+
+    /* ---------- Services teaser ---------- */
+    .menu { background: var(--surface); border-block: 1px solid var(--line); }
+    .cat-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: clamp(2rem, 5vw, 3rem);
+      margin-top: clamp(1rem, 3vw, 2rem);
+      text-align: center;
+    }
+    .cat-photo {
+      width: clamp(140px, 16vw, 180px);
+      height: clamp(140px, 16vw, 180px);
+      border-radius: 50%;
+      object-fit: cover;
+      border: 6px solid var(--paper);
+      box-shadow: 0 0 0 1px var(--line);
+      margin: 0 auto 1.4rem;
+      display: block;
+    }
+    .cat h3 { font-size: 1.35rem; margin-bottom: .6rem; }
+    .cat p { color: var(--ink-soft); font-size: .96rem; max-width: 30ch; margin-inline: auto; }
+    .cat-cta { text-align: center; margin-top: clamp(2.5rem, 5vw, 3.5rem); }
+    @media (max-width: 760px) {
+      .cat-grid { grid-template-columns: 1fr; gap: 2.5rem; }
+    }
+
+    /* ---------- Reviews ---------- */
+    .review-carousel {
+      display: grid;
+      grid-template-columns: auto 1fr auto;
+      align-items: center;
+      gap: clamp(1rem, 3vw, 2rem);
+      margin-top: clamp(2rem, 4vw, 3rem);
+    }
+    .rev-arrow {
+      width: 44px; height: 44px;
+      border-radius: 999px;
+      border: 1px solid var(--line);
+      background: var(--surface);
+      color: var(--ink);
+      display: grid; place-items: center;
+      cursor: pointer;
+      flex: none;
+      transition: background-color .3s, border-color .3s, transform .3s cubic-bezier(.22,.61,.36,1);
+    }
+    .rev-arrow:hover { background: var(--clay-soft); border-color: var(--clay); }
+    .rev-arrow:active { transform: scale(.94); }
+    .rev-arrow svg { width: 18px; height: 18px; }
+    .review-track { position: relative; min-height: 1px; }
+    .review-card {
+      display: grid;
+      grid-template-columns: auto 1fr;
+      gap: clamp(1.2rem, 3vw, 2.2rem);
+      align-items: center;
+    }
+    .review-card[hidden] { display: none; }
+    .rev-avatar {
+      width: clamp(96px, 12vw, 132px);
+      height: clamp(96px, 12vw, 132px);
+      border-radius: 50%;
+      background: var(--ember);
+      color: #FBF7EC;
+      display: grid; place-items: center;
+      font-family: var(--f-display);
+      font-size: clamp(2.2rem, 4vw, 3rem);
+      font-weight: 500;
+      border: 5px solid var(--paper);
+      box-shadow: 0 0 0 1px var(--line);
+      flex: none;
+    }
+    .rev-avatar--b { background: var(--mugwort-dp); }
+    .rev-avatar--c { background: var(--clay); color: var(--ink); }
+    .rev-bubble {
+      position: relative;
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      padding: clamp(1.4rem, 3vw, 2rem) clamp(1.6rem, 3vw, 2.2rem);
+    }
+    .rev-bubble::before {
+      content: "";
+      position: absolute;
+      left: -9px; top: 34px;
+      width: 18px; height: 18px;
+      background: var(--surface);
+      border-left: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+      transform: rotate(45deg);
+    }
+    .rev-quote { font-size: 1.05rem; line-height: 1.6; }
+    .rev-name { margin-top: 1rem; font-weight: 600; font-size: .92rem; }
+    .rev-name span { font-weight: 400; color: var(--ink-soft); font-family: var(--f-mono); font-size: .78rem; letter-spacing: .02em; }
+    .rev-dots { display: flex; justify-content: center; gap: .55rem; margin-top: clamp(1.6rem, 3vw, 2.2rem); }
+    .rev-dot {
+      width: 8px; height: 8px;
+      border-radius: 50%;
+      border: none;
+      background: var(--line);
+      cursor: pointer;
+      padding: 0;
+      transition: background-color .3s, transform .3s;
+    }
+    .rev-dot[aria-current="true"] { background: var(--ember); transform: scale(1.3); }
+    @media (max-width: 720px) {
+      .review-carousel { grid-template-columns: 1fr; }
+      .rev-arrow { display: none; }
+      .review-card { grid-template-columns: 1fr; text-align: center; justify-items: center; }
+      .rev-bubble::before { display: none; }
+    }
+
+    /* ---------- Practitioners ---------- */
+    .people { display: grid; grid-template-columns: repeat(3, 1fr); gap: clamp(1.5rem, 4vw, 3rem); }
+    .person { border-left: 2px solid var(--mugwort); padding-left: 1.2rem; }
+    .person h4 { font-size: 1.2rem; }
+    .person .cred { font-family: var(--f-mono); font-size: .74rem; letter-spacing: .08em; color: var(--ember); margin: .35rem 0 .8rem; }
+    .person p { color: var(--ink-soft); font-size: .96rem; }
+
+    /* ---------- Visit ---------- */
+    .visit { background: var(--surface); border-block: 1px solid var(--line); }
+    .visit-grid { display: grid; grid-template-columns: 1.1fr 1fr; gap: clamp(2rem, 6vw, 5rem); align-items: start; }
+    .visit address { font-style: normal; font-size: 1.15rem; line-height: 1.7; }
+    .hours { width: 100%; border-collapse: collapse; margin-top: 1.6rem; font-family: var(--f-mono); font-size: .9rem; }
+    .hours th, .hours td { text-align: left; padding: .55rem 0; border-bottom: 1px solid var(--line); font-weight: 400; }
+    .hours td:last-child { text-align: right; font-variant-numeric: tabular-nums; color: var(--ink-soft); }
+    .notes { display: grid; gap: 1.2rem; }
+    .note h4 { font-family: var(--f-body); font-weight: 600; font-size: .95rem; margin-bottom: .2rem; }
+    .note p { color: var(--ink-soft); font-size: .96rem; }
+    .visit .btn-ember { margin-top: .6rem; }
+    .map-wrap {
+      margin-top: clamp(2.5rem, 5vw, 3.5rem);
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      overflow: hidden;
+      filter: grayscale(.15) contrast(1.02);
+    }
+    .map-frame { display: block; }
+
+    /* ---------- Responsive ---------- */
+    @media (max-width: 900px) {
+      .pillars, .steps, .people, .visit-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+
+  <script>
+    const v = document.getElementById("heroVideo");
+    const c = document.getElementById("brandCanvas");
+
+    if (v && c) {
+      const ctx = c.getContext("2d");
+      const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+      const NAME = "Happy Feet Spa";
+      const cw = c.width;
+      const ch = c.height;
+
+      const paintText = () => {
+        ctx.globalCompositeOperation = "source-over";
+        ctx.clearRect(0, 0, cw, ch);
+        let size = ch * 0.62;
+        ctx.font = `600 ${size}px "Spectral", Georgia, serif`;
+        const w = ctx.measureText(NAME).width;
+        const maxW = cw * 0.94;
+        if (w > maxW) {
+          size *= maxW / w;
+          ctx.font = `600 ${size}px "Spectral", Georgia, serif`;
+        }
+        ctx.fillStyle = "#000";
+        ctx.textAlign = "center";
+        ctx.textBaseline = "middle";
+        ctx.fillText(NAME, cw / 2, ch / 2 + size * 0.04);
+      };
+
+      const paintFill = () => {
+        ctx.globalCompositeOperation = "source-in";
+        if (v.readyState >= 2 && v.videoWidth && v.videoHeight) {
+          const vw = v.videoWidth;
+          const vh = v.videoHeight;
+          const scale = Math.max(cw / vw, ch / vh);
+          const sw = cw / scale;
+          const sh = ch / scale;
+          const sx = (vw - sw) / 2;
+          const sy = (vh - sh) / 2;
+          ctx.drawImage(v, sx, sy, sw, sh, 0, 0, cw, ch);
+        } else {
+          ctx.fillStyle = getComputedStyle(document.documentElement).getPropertyValue("--ink").trim() || "#2A2621";
+          ctx.fillRect(0, 0, cw, ch);
+        }
+      };
+
+      const frame = () => {
+        paintText();
+        paintFill();
+        if (!reduce) requestAnimationFrame(frame);
+      };
+
+      if (document.fonts?.ready) {
+        document.fonts.ready.then(frame).catch(frame);
+      } else {
+        frame();
+      }
+    }
+  </script>
+
+  <script>
+    const track = document.getElementById("reviewTrack");
+    const dotsWrap = document.getElementById("reviewDots");
+
+    if (track && dotsWrap) {
+      const cards = Array.from(track.querySelectorAll(".review-card"));
+      const dots = Array.from(dotsWrap.querySelectorAll(".rev-dot"));
+      const prevBtn = document.querySelector(".rev-prev");
+      const nextBtn = document.querySelector(".rev-next");
+      const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+      let index = 0;
+      let timer = null;
+
+      const show = (i) => {
+        index = (i + cards.length) % cards.length;
+        cards.forEach((card, n) => { card.hidden = n !== index; });
+        dots.forEach((dot, n) => dot.setAttribute("aria-current", String(n === index)));
+      };
+
+      const startAutoplay = () => {
+        if (reduce) return;
+        stopAutoplay();
+        timer = window.setInterval(() => show(index + 1), 7000);
+      };
+      const stopAutoplay = () => { if (timer) window.clearInterval(timer); };
+
+      prevBtn?.addEventListener("click", () => { show(index - 1); startAutoplay(); });
+      nextBtn?.addEventListener("click", () => { show(index + 1); startAutoplay(); });
+      dots.forEach((dot) => {
+        dot.addEventListener("click", () => {
+          show(Number(dot.dataset.index));
+          startAutoplay();
+        });
+      });
+
+      const carousel = document.querySelector(".review-carousel");
+      carousel?.addEventListener("mouseenter", stopAutoplay);
+      carousel?.addEventListener("mouseleave", startAutoplay);
+
+      show(0);
+      startAutoplay();
+    }
+  </script>
+</Layout>
