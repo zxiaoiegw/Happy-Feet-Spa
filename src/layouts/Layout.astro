@@ -50,46 +50,6 @@ const { title, description, activeNav } = Astro.props;
       --f-mono: "IBM Plex Mono", ui-monospace, Menlo, monospace;
     }
 
-    @media (prefers-color-scheme: dark) {
-      :root:not([data-theme="light"]) {
-        --paper:      #211E1A;
-        --surface:    #2A2723;
-        --ink:        #ECE7DD;
-        --ink-soft:   #A49B8C;
-        --line:       #3E392F;
-
-        --pine:       #1B1813;
-        --pine-deep:  #141109;
-        --on-pine:    #ECE7DD;
-
-        --mugwort:    #A99E8B;
-        --mugwort-dp: #9A8F7C;
-        --clay:       #C6AF90;
-        --clay-soft:  #322E25;
-        --ember:      #CE7A50;
-
-        --hero-bg:    #262320;
-        --panel:      #2A2723;
-      }
-    }
-    :root[data-theme="dark"] {
-      --paper:      #211E1A;
-      --surface:    #2A2723;
-      --ink:        #ECE7DD;
-      --ink-soft:   #A49B8C;
-      --line:       #3E392F;
-      --pine:       #1B1813;
-      --pine-deep:  #141109;
-      --on-pine:    #ECE7DD;
-      --mugwort:    #A99E8B;
-      --mugwort-dp: #9A8F7C;
-      --clay:       #C6AF90;
-      --clay-soft:  #322E25;
-      --ember:      #CE7A50;
-      --hero-bg:    #262320;
-      --panel:      #2A2723;
-    }
-
     /* ---------- Base ---------- */
     * { box-sizing: border-box; }
     html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
@@ -159,8 +119,6 @@ const { title, description, activeNav } = Astro.props;
     .btn-ember { background: var(--ember); color: #FBF7EC; }
     .btn-ember .pip { background: rgba(251,247,236,.18); }
     .btn-ember:hover { background: #9a5232; }
-    :root[data-theme="dark"] .btn-ember:hover,
-    :root:not([data-theme="light"]) .btn-ember:hover { background: #d98a63; }
     .btn-ghost { border-color: currentColor; color: inherit; }
     .btn-ghost:hover { background: rgba(183,100,63,.12); }
     .pip {

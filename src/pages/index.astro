@@ -16,10 +16,7 @@ import Layout from "../layouts/Layout.astro";
 
       <div class="wrap hero-stack">
         <p class="eyebrow">Foot Reflexology &amp; Traditional Chinese Medicine</p>
-        <h1 class="brand-name" id="hero-h">
-          <canvas id="brandCanvas" class="brand-canvas" width="1600" height="280"></canvas>
-          <span class="brand-fallback">Happy Feet Spa</span>
-        </h1>
+        <h1 class="brand-name" id="hero-h">Happy Feet Spa</h1>
         <div class="hero-actions">
           <a class="btn btn-ember" href="tel:+18165233338">
             Call to book
@@ -260,6 +257,8 @@ import Layout from "../layouts/Layout.astro";
       position: absolute; inset: 0;
       z-index: 1;
       background: linear-gradient(180deg, rgba(244,241,234,.28) 0%, rgba(244,241,234,.6) 58%, rgba(244,241,234,.82) 100%);
+      /* scrim disabled for comparison */
+      /*background: none;*/
     }
     .hero--video .wrap { position: relative; z-index: 2; }
     .hero-stack {
@@ -268,15 +267,15 @@ import Layout from "../layouts/Layout.astro";
       gap: 1.3rem;
       max-width: 46ch; margin-inline: auto;
     }
-    .brand-name { margin: .1rem 0 .05rem; line-height: 1; }
-    .brand-canvas {
-      display: block;
-      width: min(94vw, 860px);
-      height: auto;
-      aspect-ratio: 1600 / 280;
-      margin-inline: auto;
+    .brand-name {
+      margin: .1rem 0 .05rem;
+      line-height: 1;
+      font-size: clamp(2.5rem, 9vw, 5.75rem);
+      color: var(--ink);
+      text-shadow: 0 2px 24px color-mix(in srgb, var(--paper) 70%, transparent);
+      white-space: nowrap;
+      max-width: 94vw;
     }
-    .brand-fallback { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
     .hero-stack .hero-actions { display: flex; flex-wrap: wrap; gap: .9rem; justify-content: center; margin-top: 5.5rem; }
     .hero .eyebrow { color: var(--ember); }
     .hero .lead { color: var(--ink-soft); }
@@ -466,65 +465,6 @@ import Layout from "../layouts/Layout.astro";
       .pillars, .steps, .people, .visit-grid { grid-template-columns: 1fr; }
     }
   </style>
-
-  <script>
-    const v = document.getElementById("heroVideo");
-    const c = document.getElementById("brandCanvas");
-
-    if (v && c) {
-      const ctx = c.getContext("2d");
-      const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-      const NAME = "Happy Feet Spa";
-      const cw = c.width;
-      const ch = c.height;
-
-      const paintText = () => {
-        ctx.globalCompositeOperation = "source-over";
-        ctx.clearRect(0, 0, cw, ch);
-        let size = ch * 0.62;
-        ctx.font = `600 ${size}px "Spectral", Georgia, serif`;
-        const w = ctx.measureText(NAME).width;
-        const maxW = cw * 0.94;
-        if (w > maxW) {
-          size *= maxW / w;
-          ctx.font = `600 ${size}px "Spectral", Georgia, serif`;
-        }
-        ctx.fillStyle = "#000";
-        ctx.textAlign = "center";
-        ctx.textBaseline = "middle";
-        ctx.fillText(NAME, cw / 2, ch / 2 + size * 0.04);
-      };
-
-      const paintFill = () => {
-        ctx.globalCompositeOperation = "source-in";
-        if (v.readyState >= 2 && v.videoWidth && v.videoHeight) {
-          const vw = v.videoWidth;
-          const vh = v.videoHeight;
-          const scale = Math.max(cw / vw, ch / vh);
-          const sw = cw / scale;
-          const sh = ch / scale;
-          const sx = (vw - sw) / 2;
-          const sy = (vh - sh) / 2;
-          ctx.drawImage(v, sx, sy, sw, sh, 0, 0, cw, ch);
-        } else {
-          ctx.fillStyle = getComputedStyle(document.documentElement).getPropertyValue("--ink").trim() || "#2A2621";
-          ctx.fillRect(0, 0, cw, ch);
-        }
-      };
-
-      const frame = () => {
-        paintText();
-        paintFill();
-        if (!reduce) requestAnimationFrame(frame);
-      };
-
-      if (document.fonts?.ready) {
-        document.fonts.ready.then(frame).catch(frame);
-      } else {
-        frame();
-      }
-    }
-  </script>
 
   <script>
     const track = document.getElementById("reviewTrack");
