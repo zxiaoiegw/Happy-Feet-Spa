@@ -1,0 +1,139 @@
+---
+import Layout from "../layouts/Layout.astro";
+
+const outside = [
+  { src: "/images/gallery/22.JPG", alt: "Happy Feet Spa storefront with signage" },
+  { src: "/images/gallery/24.JPG", alt: "Storefront windows and entrance of Happy Feet Spa" },
+  { src: "/images/gallery/23.JPG", alt: "Window display with business hours and phone number" },
+];
+
+const inside = [
+  { src: "/images/gallery/20.JPG", alt: "Reflexology lounge with recliner chairs" },
+  { src: "/images/gallery/21.JPG", alt: "Row of massage tables prepared with fresh linens" },
+  { src: "/images/gallery/27.JPG", alt: "Private treatment room with massage table and moxibustion bed" },
+  { src: "/images/gallery/25.JPG", alt: "Moxibustion treatment bed prepared for a session" },
+  { src: "/images/gallery/26.JPG", alt: "Folded linens on a moxibustion bed" },
+];
+---
+<Layout
+  title="Happy Feet Spa — Gallery"
+  description="A look inside and outside Happy Feet Spa in Kansas City — our storefront, reflexology lounge, and private treatment rooms."
+  activeNav="gallery"
+>
+  <main>
+    <!-- PAGE INTRO -->
+    <section class="hero">
+      <div class="wrap">
+        <p class="eyebrow">Gallery</p>
+        <h1>Inside &amp; out.</h1>
+        <p class="lead">A quick look at the space &mdash; our storefront on State Line Road, the reflexology lounge, and the private rooms where treatments happen.</p>
+      </div>
+    </section>
+
+    <!-- OUTSIDE -->
+    <section aria-labelledby="outside-h">
+      <div class="wrap">
+        <div class="sec-head reveal">
+          <p class="eyebrow">Outside</p>
+          <h2 id="outside-h">Find us on State Line Road.</h2>
+        </div>
+        <div class="gal-grid">
+          {outside.map((img) => (
+            <figure class="gal-item reveal">
+              <img src={img.src} alt={img.alt} loading="lazy" />
+            </figure>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- INSIDE -->
+    <section class="inside" aria-labelledby="inside-h">
+      <div class="wrap">
+        <div class="sec-head reveal">
+          <p class="eyebrow">Inside</p>
+          <h2 id="inside-h">Clean, quiet, and set up for care.</h2>
+        </div>
+        <div class="gal-grid">
+          {inside.map((img) => (
+            <figure class="gal-item reveal">
+              <img src={img.src} alt={img.alt} loading="lazy" />
+            </figure>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-band">
+      <div class="wrap">
+        <p class="eyebrow">Ready when you are</p>
+        <h2>Come see it in person.</h2>
+        <p class="lead">Walk-ins welcome based on availability. Phone bookings recommended to secure your spot.</p>
+        <div class="hero-actions">
+          <a class="btn btn-ember" href="tel:+18165233338">
+            Call (816) 523-3338
+            <span class="pip" aria-hidden="true"><svg viewBox="0 0 16 16" fill="none"><path d="M4 8h8M8 4l4 4-4 4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <style>
+    /* ---------- Page intro (light band) ---------- */
+    .hero {
+      background: var(--hero-bg);
+      color: var(--ink);
+      border-bottom: 1px solid var(--line);
+      padding-top: calc(var(--step) + 3.2rem);
+      padding-bottom: clamp(2.5rem, 5vw, 3.5rem);
+    }
+    .hero h1 {
+      font-size: clamp(2.3rem, 5vw, 3.4rem);
+      font-weight: 400;
+      letter-spacing: -.01em;
+      margin: 0 0 1rem;
+    }
+    .hero .eyebrow { color: var(--ember); }
+    .hero .lead { color: var(--ink-soft); }
+
+    /* ---------- Gallery grid ---------- */
+    .inside { background: var(--surface); border-block: 1px solid var(--line); }
+    .gal-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: clamp(.8rem, 2vw, 1.4rem);
+      margin-top: clamp(1rem, 3vw, 2rem);
+    }
+    .gal-item {
+      margin: 0;
+      border-radius: 16px;
+      overflow: hidden;
+      border: 1px solid var(--line);
+      background: var(--paper);
+    }
+    .gal-item img {
+      display: block;
+      width: 100%;
+      height: clamp(220px, 26vw, 320px);
+      object-fit: cover;
+      transition: transform .5s cubic-bezier(.22,.61,.36,1);
+    }
+    .gal-item:hover img { transform: scale(1.04); }
+
+    /* ---------- CTA band ---------- */
+    .cta-band { background: var(--hero-bg); border-block: 1px solid var(--line); text-align: center; }
+    .cta-band .lead { margin-inline: auto; color: var(--ink-soft); }
+    .cta-band .hero-actions { display: flex; justify-content: center; margin-top: 1.6rem; }
+
+    /* ---------- Responsive ---------- */
+    @media (max-width: 860px) {
+      .gal-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width: 560px) {
+      .gal-grid { grid-template-columns: 1fr; }
+      .gal-item img { height: clamp(240px, 62vw, 320px); }
+    }
+  </style>
+</Layout>
