@@ -24,17 +24,13 @@ import Layout from "../layouts/Layout.astro";
           </a>
           <a class="btn btn-ghost" href="/services">View Full Menu</a>
         </div>
-        <p class="trust">Walk-ins welcome &middot; Certified therapists &middot; 4.7&#9733; (49 Google reviews)</p>
+        <p class="trust">Walk-ins welcome &middot; Certified therapists</p>
       </div>
     </section>
 
     <!-- PILLARS -->
-    <section aria-labelledby="what-h">
+    <section>
       <div class="wrap">
-        <div class="sec-head reveal">
-          <p class="eyebrow">Two traditions, one room</p>
-          <h2 id="what-h">Careful hands and warmth, applied where the body holds strain.</h2>
-        </div>
         <div class="pillars">
           <article class="pillar reveal">
             <span class="zh">足療 &nbsp;Foot Reflexology</span>
@@ -209,7 +205,7 @@ import Layout from "../layouts/Layout.astro";
             </table>
           </div>
           <div class="notes reveal">
-            <div class="note"><h4>Walk-ins</h4><p>Welcome based on availability &mdash; a quick call ahead is recommended for evenings and weekends.</p></div>
+            <div class="note"><h4>Walk-ins</h4><p>Welcome based on availability &mdash; call ahead to secure your spot.</p></div>
             <div class="note"><h4>Location</h4><p>Find us in Meadowlake Shops on State Line Road, with parking right out front.</p></div>
             <div class="note"><h4>Reviews</h4><p>Rated 4.7 stars from 49 Google reviews.</p></div>
           </div>
@@ -246,8 +242,13 @@ import Layout from "../layouts/Layout.astro";
       position: absolute; inset: 0;
       width: 100%; height: 100%;
       object-fit: cover;
+      object-position: 42% center;
       z-index: 0;
       animation: heroKen 26s ease-in-out infinite alternate;
+    }
+    @media (max-width: 700px) {
+      .hero--video { min-height: clamp(420px, 68vh, 620px); }
+      .hero-video { object-position: 38% center; }
     }
     @keyframes heroKen {
       from { transform: scale(1.04) translate3d(-1%, -1%, 0); }
@@ -271,6 +272,7 @@ import Layout from "../layouts/Layout.astro";
       margin: .1rem 0 .05rem;
       line-height: 1;
       font-size: clamp(2.5rem, 9vw, 5.75rem);
+      font-weight: 600;
       color: var(--ink);
       text-shadow: 0 2px 24px color-mix(in srgb, var(--paper) 70%, transparent);
       white-space: nowrap;
@@ -284,7 +286,7 @@ import Layout from "../layouts/Layout.astro";
       font-family: var(--f-mono);
       font-size: .74rem;
       letter-spacing: .04em;
-      color: var(--ink-soft);
+      color: var(--ink);
       display: flex; align-items: center; gap: .6rem; flex-wrap: wrap;
     }
     .trust::before { content: ""; width: 26px; height: 1px; background: var(--ember); display: inline-block; }
@@ -308,7 +310,7 @@ import Layout from "../layouts/Layout.astro";
       width: 100%; max-width: 460px;
       height: 300px;
       object-fit: contain;
-      object-position: left top;
+      object-position: center;
       border-radius: 16px;
     }
     .chips { display: flex; flex-wrap: wrap; gap: .5rem; margin-top: 1.4rem; }
