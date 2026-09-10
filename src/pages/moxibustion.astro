@@ -1,0 +1,236 @@
+---
+import Layout from "../layouts/Layout.astro";
+---
+<Layout
+  title="Happy Feet Spa — Moxibustion Therapy"
+  description="Moxibustion therapy in Kansas City: warming mugwort heat applied along the body's meridians to ease cold, tension, cramps, and restless sleep."
+  activeNav="moxibustion"
+>
+  <main>
+    <!-- PAGE INTRO -->
+    <section class="hero">
+      <div class="wrap hero-copy">
+        <p class="eyebrow">TCM Therapy</p>
+        <h1>Traditional Chinese Medicine (TCM) &mdash; Moxibustion Therapy</h1>
+        <p class="lead">Traditional Chinese Medicine therapy using cupping and moxibustion techniques to improve blood circulation, remove muscle stiffness, and support overall body wellness and recovery.</p>
+      </div>
+      <img class="hero-bed" src="/images/moxibustion-bed.png" alt="The moxibustion bed used at Happy Feet Spa" />
+    </section>
+
+    <!-- THE METHOD -->
+    <section aria-labelledby="method-h">
+      <div class="wrap">
+        <div class="sec-head reveal">
+          <p class="eyebrow">The method</p>
+          <h2 id="method-h">Gentle heat, where the body holds cold.</h2>
+        </div>
+        <div class="method-body reveal">
+          <p>Moxa is dried mugwort, warmed close to the skin over specific acupoints. The heat sinks in slowly and travels along the meridian, which is what makes it feel different from a heating pad &mdash; it reaches the deeper ache rather than sitting on the surface.</p>
+          <p>Our moxibustion bed delivers that warmth evenly across the back and lower body, with the smoke drawn away so the session stays comfortable. Your therapist sets the temperature and the points to your body and the day, then checks in as the heat builds.</p>
+        </div>
+        <ul class="method-points reveal">
+          <li>Warms the meridians</li>
+          <li>Moves qi &amp; blood</li>
+          <li>Dispels cold &amp; damp</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- WHO IT HELPS -->
+    <section class="who" aria-labelledby="who-h">
+      <div class="wrap">
+        <div class="sec-head reveal" style="text-align:center;max-width:60ch;margin-inline:auto;">
+          <p class="eyebrow">Who it helps</p>
+          <h2 id="who-h">Made for the aches that ease with warmth.</h2>
+        </div>
+        <div class="who-grid">
+          <figure class="who-card reveal">
+            <img src="/images/moxa-menstrual.jpg" alt="Person resting with lower abdominal cramps" />
+            <figcaption>
+              <h3>Menstrual Cramps &amp; Cold</h3>
+              <p>Cramping and heaviness in the lower abdomen that eases when you apply warmth.</p>
+            </figcaption>
+          </figure>
+          <figure class="who-card reveal">
+            <img src="/images/moxa-shoulder.jpg" alt="Person holding a tense shoulder" />
+            <figcaption>
+              <h3>Neck &amp; Shoulder Tension</h3>
+              <p>Knots that build from desk work, driving, and carrying stress in the upper back.</p>
+            </figcaption>
+          </figure>
+          <figure class="who-card reveal">
+            <img src="/images/moxa-stiffness.jpg" alt="Person with a stiff, aching neck and upper back" />
+            <figcaption>
+              <h3>Stiffness &amp; Cold-Weather Aches</h3>
+              <p>Morning stiffness and deep aches that feel worse in cold or damp weather.</p>
+            </figcaption>
+          </figure>
+          <figure class="who-card reveal">
+            <img src="/images/moxa-insomnia.jpg" alt="Person awake in bed, unable to sleep" />
+            <figcaption>
+              <h3>Restless Sleep</h3>
+              <p>A busy mind at night and light, unrefreshing sleep, calmed by grounding heat.</p>
+            </figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- YOUR SESSION -->
+    <section class="session" aria-labelledby="session-h">
+      <div class="wrap session-grid">
+        <div class="reveal">
+          <p class="eyebrow">Your session</p>
+          <h2 id="session-h">What to expect.</h2>
+          <p class="session-copy">You'll rest comfortably as gentle warmth builds gradually around the body &mdash; most people find it deeply relaxing and some drift off. After your session, sip warm water and stay comfortably warm as you ease back into your day.</p>
+        </div>
+        <div class="session-prices reveal">
+          <h3>Pricing</h3>
+          <div class="price-row"><span class="dur">60 min</span><span class="dots"></span><span class="price">$95</span></div>
+          <div class="price-row"><span class="dur">75 min</span><span class="dots"></span><span class="price">$115</span></div>
+          <div class="price-row"><span class="dur">90 min</span><span class="dots"></span><span class="price">$135</span></div>
+          <p class="price-note">Part of our TCM Therapy service. Walk-ins welcome based on availability &mdash; call ahead to secure your spot.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-band">
+      <div class="wrap">
+        <p class="eyebrow">Ready when you are</p>
+        <h2>Book a moxibustion session.</h2>
+        <p class="lead">Walk-ins welcome based on availability. Phone bookings recommended to secure your spot.</p>
+        <div class="hero-actions">
+          <a class="btn btn-ember" href="tel:+18165233338">
+            Call (816) 523-3338
+            <span class="pip" aria-hidden="true"><svg viewBox="0 0 16 16" fill="none"><path d="M4 8h8M8 4l4 4-4 4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <style>
+    /* ---------- Page intro (light band, bed takes over) ---------- */
+    .hero {
+      background: var(--hero-bg);
+      color: var(--ink);
+      border-bottom: 1px solid var(--line);
+      padding-top: calc(var(--step) + 3.2rem);
+      padding-bottom: 0;
+      overflow: hidden;
+      text-align: center;
+    }
+    .hero-copy { max-width: 60ch; }
+    .hero h1 {
+      font-size: clamp(2.3rem, 5vw, 3.4rem);
+      font-weight: 400;
+      letter-spacing: -.01em;
+      margin: 0 0 1rem;
+    }
+    .hero .eyebrow { color: var(--ember); }
+    .hero .lead { color: var(--ink-soft); margin-inline: auto; }
+    .hero-actions { display: flex; flex-wrap: wrap; gap: .9rem; margin-top: 1.8rem; justify-content: center; }
+    .hero .btn-ghost { color: var(--ink); }
+
+    .hero-bed {
+      display: block;
+      width: min(1500px, 100%);
+      height: auto;
+      margin: clamp(2rem, 5vw, 3.5rem) auto -1px;
+    }
+
+    /* ---------- The method ---------- */
+    .method-body { display: grid; gap: 1.2rem; max-width: 64ch; font-size: 1.05rem; color: var(--ink); }
+    .method-points {
+      list-style: none;
+      margin: clamp(1.8rem, 4vw, 2.6rem) 0 0;
+      padding: 0;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 0;
+    }
+    .method-points li {
+      padding: 1.1rem 0;
+      border-top: 2px solid var(--ink);
+      font-family: var(--f-display);
+      font-size: 1.15rem;
+    }
+
+    /* ---------- Who it helps ---------- */
+    .who { background: var(--surface); border-block: 1px solid var(--line); }
+    .who-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: clamp(1.5rem, 3.5vw, 2.4rem);
+      margin-top: clamp(1rem, 3vw, 2rem);
+    }
+    .who-card {
+      margin: 0;
+      background: var(--paper);
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+    }
+    .who-card img {
+      width: 100%;
+      height: clamp(200px, 26vw, 280px);
+      object-fit: cover;
+      display: block;
+    }
+    .who-card figcaption { padding: 1.3rem clamp(1.2rem, 2.5vw, 1.7rem) 1.5rem; }
+    .who-card h3 { font-size: 1.3rem; margin-bottom: .5rem; }
+    .who-card p { color: var(--ink-soft); font-size: .97rem; }
+
+    /* ---------- Your session ---------- */
+    .session-grid {
+      display: grid;
+      grid-template-columns: 1.15fr .85fr;
+      gap: clamp(2rem, 6vw, 5rem);
+      align-items: start;
+    }
+    .session h2 { font-size: clamp(1.9rem, 3.6vw, 2.9rem); font-weight: 400; margin-bottom: 1rem; }
+    .session-copy { color: var(--ink-soft); max-width: 52ch; }
+    .session-prices h3 {
+      font-family: var(--f-mono);
+      font-weight: 500;
+      font-size: .82rem;
+      letter-spacing: .2em;
+      text-transform: uppercase;
+      color: var(--ink);
+      padding-bottom: .9rem;
+      border-bottom: 2px solid var(--ink);
+      margin-bottom: 1rem;
+    }
+    .price-row {
+      display: grid;
+      grid-template-columns: auto 1fr auto;
+      align-items: baseline;
+      gap: .6rem;
+      padding: .35rem 0;
+    }
+    .price-row .dur { font-family: var(--f-mono); font-size: .92rem; color: var(--ink); white-space: nowrap; }
+    .price-row .dots { border-bottom: 1px dotted var(--line); transform: translateY(-.3rem); }
+    .price-row .price { font-family: var(--f-mono); font-size: 1.02rem; color: var(--ember); font-variant-numeric: tabular-nums; white-space: nowrap; }
+    .price-note { margin-top: 1.1rem; color: var(--ink-soft); font-size: .88rem; }
+
+    /* ---------- CTA band ---------- */
+    .cta-band { background: var(--surface); border-block: 1px solid var(--line); text-align: center; }
+    .cta-band .lead { margin-inline: auto; color: var(--ink-soft); }
+    .cta-band .hero-actions { justify-content: center; }
+
+    /* ---------- Responsive ---------- */
+    @media (max-width: 860px) {
+      .intro-grid { grid-template-columns: 1fr; }
+      .session-grid { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 620px) {
+      .who-grid { grid-template-columns: 1fr; }
+      .method-points { grid-template-columns: 1fr; }
+      .method-points li { border-top: 1px solid var(--line); }
+      .method-points li:first-child { border-top: 2px solid var(--ink); }
+    }
+  </style>
+</Layout>

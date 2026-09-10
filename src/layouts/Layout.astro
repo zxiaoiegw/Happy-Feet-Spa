@@ -2,7 +2,7 @@
 export interface Props {
   title: string;
   description: string;
-  activeNav: "home" | "services" | "about";
+  activeNav: "home" | "services" | "about" | "moxibustion";
 }
 const { title, description, activeNav } = Astro.props;
 ---
@@ -166,16 +166,17 @@ const { title, description, activeNav } = Astro.props;
       color: var(--ink-soft);
       margin-top: .1rem;
     }
-    .head-nav { display: flex; align-items: center; gap: 1.75rem; font-size: .92rem; font-weight: 600; }
-    .head-nav a { text-decoration: none; color: var(--ink-soft); }
+    .head-nav { display: flex; align-items: center; gap: 1.5rem; font-size: .92rem; font-weight: 600; }
+    .head-nav a { text-decoration: none; color: var(--ink-soft); white-space: nowrap; }
     .head-nav a:hover { color: var(--ink); }
     .head-nav a.active { color: var(--ember); }
-    @media (max-width: 760px) { .head-nav { display: none; } }
+    @media (max-width: 940px) { .head-nav { display: none; } }
     .head-right { display: flex; align-items: center; gap: 1.25rem; }
-    .head-hours { font-family: var(--f-mono); font-size: .74rem; letter-spacing: .04em; color: var(--ink-soft); }
+    .head-hours { font-family: var(--f-mono); font-size: .74rem; letter-spacing: .04em; color: var(--ink-soft); white-space: nowrap; }
     .head-tel { text-decoration: none; font-weight: 600; font-size: .95rem; white-space: nowrap; }
-    .head-right .btn { padding: .6rem .7rem .6rem 1.1rem; font-size: .9rem; }
-    @media (max-width: 860px) { .head-hours, .head-tel { display: none; } }
+    .head-right .btn { padding: .6rem .7rem .6rem 1.1rem; font-size: .9rem; white-space: nowrap; }
+    @media (max-width: 1320px) { .head-hours { display: none; } }
+    @media (max-width: 1060px) { .head-tel { display: none; } }
 
     /* ---------- Mobile menu ---------- */
     .menu-toggle {
@@ -198,8 +199,10 @@ const { title, description, activeNav } = Astro.props;
       background: var(--ink);
       border-radius: 2px;
     }
-    @media (max-width: 760px) {
+    @media (max-width: 940px) {
       .menu-toggle { display: flex; }
+    }
+    @media (max-width: 760px) {
       .head-right .btn-ember { display: none; }
     }
     body.no-scroll { overflow: hidden; }
@@ -341,6 +344,7 @@ const { title, description, activeNav } = Astro.props;
         <a href="/#top" class={activeNav === "home" ? "active" : ""}>Home</a>
         <a href="/about" class={activeNav === "about" ? "active" : ""}>About</a>
         <a href="/services" class={activeNav === "services" ? "active" : ""}>Services</a>
+        <a href="/moxibustion" class={activeNav === "moxibustion" ? "active" : ""}>Moxibustion</a>
         <a href="/#visit">Location</a>
       </nav>
     </div>
@@ -386,6 +390,7 @@ const { title, description, activeNav } = Astro.props;
       <a href="/#top" class={activeNav === "home" ? "active" : ""}>Home</a>
       <a href="/about" class={activeNav === "about" ? "active" : ""}>About</a>
       <a href="/services" class={activeNav === "services" ? "active" : ""}>Services</a>
+      <a href="/moxibustion" class={activeNav === "moxibustion" ? "active" : ""}>Moxibustion</a>
       <a href="/#visit">Location</a>
     </nav>
     <p class="mobile-foot">(816) 523-3338 &middot; Open Mon&ndash;Sat 10am&ndash;7pm</p>
