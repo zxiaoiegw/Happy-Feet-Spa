@@ -86,10 +86,14 @@ import Layout from "../layouts/Layout.astro";
         </div>
         <div class="session-prices reveal">
           <h3>Pricing</h3>
-          <div class="price-row"><span class="dur">60 min</span><span class="dots"></span><span class="price">$95</span></div>
-          <div class="price-row"><span class="dur">75 min</span><span class="dots"></span><span class="price">$115</span></div>
-          <div class="price-row"><span class="dur">90 min</span><span class="dots"></span><span class="price">$135</span></div>
-          <p class="price-note">Part of our TCM Therapy service. Walk-ins welcome based on availability &mdash; call ahead to secure your spot.</p>
+          <p class="price-group">Moxibustion Instrument</p>
+          <div class="price-row"><span class="dur">30 min</span><span class="dots"></span><span class="price">$15</span></div>
+          <div class="price-row"><span class="dur">60 min</span><span class="dots"></span><span class="price">$30</span></div>
+          <p class="price-group">Moxibustion Bed</p>
+          <div class="price-row"><span class="dur">60 min</span><span class="dots"></span><span class="price">$60</span></div>
+          <p class="price-group">Add to Any Service</p>
+          <div class="price-row"><span class="dur">Moxibustion Instrument</span><span class="dots"></span><span class="price">+$15</span></div>
+          <p class="price-note">Walk-ins welcome based on availability &mdash; call ahead to secure your spot.</p>
         </div>
       </div>
     </section>
@@ -214,6 +218,15 @@ import Layout from "../layouts/Layout.astro";
     .price-row .dur { font-family: var(--f-mono); font-size: .92rem; color: var(--ink); white-space: nowrap; }
     .price-row .dots { border-bottom: 1px dotted var(--line); transform: translateY(-.3rem); }
     .price-row .price { font-family: var(--f-mono); font-size: 1.02rem; color: var(--ember); font-variant-numeric: tabular-nums; white-space: nowrap; }
+    .price-group {
+      font-family: var(--f-mono);
+      font-size: .68rem;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      color: var(--ink-soft);
+      margin: .5rem 0 -.05rem;
+    }
+    .price-group:first-child { margin-top: 0; }
     .price-note { margin-top: 1.1rem; color: var(--ink-soft); font-size: .88rem; }
 
     /* ---------- CTA band ---------- */
