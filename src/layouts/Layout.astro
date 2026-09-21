@@ -23,6 +23,46 @@ const { title, description, activeNav } = Astro.props;
     gtag('js', new Date());
     gtag('config', 'AW-18451390851');
   </script>
+  <!-- Google Ads "Calls from website" — replaces business number with Google forwarding number for eligible Ads visitors -->
+  <script>
+    gtag('config', 'AW-18451390851/d7XtCPfUu4AdEIPDp95E', {
+      'phone_conversion_number': '(816) 523-3338',
+      'phone_conversion_callback': function (formatted_number, mobile_number) {
+        // formatted_number: display form matching phone_conversion_number
+        // mobile_number: tel:-URI digits (e.g. '+18165551212')
+        // Only swap Happy Feet Spa's number — never other tel: links added later.
+        var BUSINESS_DIGITS = '18165233338';
+        var phoneRe = /\(?816\)?[\s\u00A0.-]*523[\s\u00A0.-]*3338/g;
+        var isBusinessTel = function (href) {
+          var digits = (href || '').replace(/\D/g, '');
+          if (!digits) return false;
+          // Match +18165233338, 8165233338, 18165233338, etc.
+          return digits === BUSINESS_DIGITS || digits === BUSINESS_DIGITS.slice(1);
+        };
+        var apply = function () {
+          document.querySelectorAll('a[href^="tel:"]').forEach(function (el) {
+            if (!isBusinessTel(el.getAttribute('href'))) return;
+            el.setAttribute('href', 'tel:' + mobile_number);
+          });
+          var walker = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT, null);
+          var nodes = [];
+          while (walker.nextNode()) nodes.push(walker.currentNode);
+          nodes.forEach(function (node) {
+            phoneRe.lastIndex = 0;
+            if (phoneRe.test(node.nodeValue)) {
+              phoneRe.lastIndex = 0;
+              node.nodeValue = node.nodeValue.replace(phoneRe, formatted_number);
+            }
+          });
+        };
+        if (document.readyState === 'loading') {
+          document.addEventListener('DOMContentLoaded', apply);
+        } else {
+          apply();
+        }
+      }
+    });
+  </script>
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
