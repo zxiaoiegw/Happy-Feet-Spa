@@ -17,14 +17,14 @@ const { title, description, activeNav } = Astro.props;
 
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18451390851"></script>
-  <script>
+  <script is:inline>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
     gtag('config', 'AW-18451390851');
   </script>
   <!-- Google Ads "Calls from website" — replaces business number with Google forwarding number for eligible Ads visitors -->
-  <script>
+  <script is:inline>
     gtag('config', 'AW-18451390851/d7XtCPfUu4AdEIPDp95E', {
       'phone_conversion_number': '(816) 523-3338',
       'phone_conversion_callback': function (formatted_number, mobile_number) {
